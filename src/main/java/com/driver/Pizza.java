@@ -50,6 +50,7 @@ public class Pizza {
 
     public String getBill(){
 
+        System.out.println("Base Price Of The Pizza: "+price);
         if(extraCheese) {
             System.out.println("Extra Cheese Added: " + cheesePrice);
             price += cheesePrice;
@@ -63,7 +64,7 @@ public class Pizza {
             price += bagPrice;
         }
         System.out.print("Total Price: ");
-        bill = String.valueOf(price);
+        bill = String.valueOf(price)+"\n";
         return this.bill;
     }
 }
