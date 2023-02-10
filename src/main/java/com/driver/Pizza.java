@@ -29,7 +29,7 @@ public class Pizza {
     }
 
     public int getPrice(){
-        System.out.println("Base Price Of The Pizza: ");
+        System.out.print("Base Price Of The Pizza: ");
         return this.price;
     }
 
