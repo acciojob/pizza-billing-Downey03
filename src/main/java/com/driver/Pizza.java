@@ -29,6 +29,7 @@ public class Pizza {
     }
 
     public int getPrice(){
+        System.out.println("Base Price Of The Pizza: ");
         return this.price;
     }
 
@@ -48,7 +49,7 @@ public class Pizza {
     }
 
     public String getBill(){
-        System.out.println("Base Price Of The Pizza: "+price);
+
         if(extraCheese) {
             System.out.println("Extra Cheese Added: " + cheesePrice);
             price += cheesePrice;
