@@ -16,11 +16,11 @@ public class Pizza {
         this.isVeg = isVeg;
 
         if(isVeg){
-            this.price += 300;
+            this.price = 300;
             this.toppinPrice = 70 ;
         }
         else {
-            this.price += 400;
+            this.price = 400;
             this.toppinPrice = 120 ;
         }
         cheesePrice = 80;
