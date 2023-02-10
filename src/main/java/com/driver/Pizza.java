@@ -3,7 +3,6 @@ package com.driver;
 public class Pizza {
 
     private int price;
-    private int total;
     private boolean extraCheese;
     private boolean extraToppins;
     private boolean carryBag;
@@ -34,17 +33,17 @@ public class Pizza {
     }
 
     public void addExtraCheese(){
-        if(extraToppins) return;
-        this.total += this.cheesePrice;
+        if(extraCheese || extraToppins) return;
+        this.price += this.cheesePrice;
     }
 
     public void addExtraToppings(){
-        this.total += this.toppinPrice;
+        if(extraToppins) return;
         extraToppins = true;
     }
 
     public void addTakeaway(){
-       this.total += this.bagPrice;
+       if(carryBag) return;
        carryBag = true;
     }
 
@@ -64,7 +63,7 @@ public class Pizza {
             bill+="Paperbag Added: " + bagPrice+"\n";
             price += bagPrice;
         }
-        bill+="Total Price: "+(price+total)+"\n";
+        bill+="Total Price: "+price+"\n";
 
         return this.bill;
     }
