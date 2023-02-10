@@ -50,21 +50,22 @@ public class Pizza {
 
     public String getBill(){
 
-        System.out.println("Base Price Of The Pizza: "+price);
+        bill="";
+        bill+="Base Price Of The Pizza: "+price+"\n";
         if(extraCheese) {
-            System.out.println("Extra Cheese Added: " + cheesePrice);
+            bill+="Extra Cheese Added: " + cheesePrice+"\n";
             price += cheesePrice;
         }
         if(extraToppins) {
-            System.out.println("Extra Toppings Added: " + toppinPrice);
+            bill+="Extra Toppings Added: " + toppinPrice+"\n";
             price += toppinPrice;
         }
         if(carryBag) {
-            System.out.println("Paperbag Added: " + bagPrice);
+            bill+="Paperbag Added: " + bagPrice+"\n";
             price += bagPrice;
         }
-        System.out.print("Total Price: ");
-        bill = String.valueOf(price)+"\n";
+        bill+="Total Price: "+price+"\n";
+
         return this.bill;
     }
 }
