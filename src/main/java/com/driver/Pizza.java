@@ -33,17 +33,17 @@ public class Pizza {
     }
 
     public void addExtraCheese(){
-        if(extraCheese || extraToppins) return;
-        this.price += this.cheesePrice;
+       // if(extraCheese) return;
+        extraCheese = true ;
     }
 
     public void addExtraToppings(){
-        if(extraToppins) return;
+     //   if(extraToppins) return;
         extraToppins = true;
     }
 
     public void addTakeaway(){
-       if(carryBag) return;
+    //   if(carryBag) return;
        carryBag = true;
     }
 
