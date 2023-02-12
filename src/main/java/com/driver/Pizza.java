@@ -12,6 +12,7 @@ public class Pizza {
     private Boolean isVeg;
     private String bill;
     private boolean billCreated;
+
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
 
@@ -64,7 +65,7 @@ public class Pizza {
             bill+="Paperbag Added: " + bagPrice+"\n";
             price += bagPrice;
         }
-        bill+="Total Price: "+price+"\n";
+        bill+="Total Price: "+price;
         billCreated = true;
         return this.bill;
     }
