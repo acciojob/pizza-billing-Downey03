@@ -110,23 +110,47 @@ public class Pizza {
 
     public String getBill(){
 
-        if(billCreated) return "";
-        bill="";
-        bill+="Base Price Of The Pizza: "+price+"\n";
-        if(extraCheese) {
-            bill+="Extra Cheese Added: " + cheesePrice+"\n";
-            price += cheesePrice;
+//        if(billCreated) return "";
+//        bill="";
+//        bill+="Base Price Of The Pizza: "+price+"\n";
+//        if(extraCheese) {
+//            bill+="Extra Cheese Added: " + cheesePrice+"\n";
+//            price += cheesePrice;
+//        }
+//        if(extraToppins) {
+//            bill+="Extra Toppings Added: " + toppinPrice+"\n";
+//            price += toppinPrice;
+//        }
+//        if(carryBag) {
+//            bill+="Paperbag Added: " + bagPrice+"\n";
+//            price += bagPrice;
+//        }
+//        bill+="Total Price: "+price+"\n";
+//        billCreated = true;
+//        return this.bill;
+//    }
+
+        String bill = "";
+        if(!billCreated){
+//            bill += "Total Price: "+price+"\n";
+//            this.isBillGenerated = true;
+//            return this.bill;
+            if(isVeg)
+                bill = "Base Price Of The Pizza: 300\n";
+            else
+                bill = "Base Price Of The Pizza: 400\n";
+
+            if(extraCheese)
+                bill += "Extra Cheese Added: 80\n";
+            if(extraToppins)
+                bill += "Extra Toppings Added: "+toppinPrice+"\n";
+            if(carryBag)
+                bill += "Paperbag Added: 20\n";
+
+            bill += "Total Price: "+price+"\n";
+            return bill;
+
         }
-        if(extraToppins) {
-            bill+="Extra Toppings Added: " + toppinPrice+"\n";
-            price += toppinPrice;
-        }
-        if(carryBag) {
-            bill+="Paperbag Added: " + bagPrice+"\n";
-            price += bagPrice;
-        }
-        bill+="Total Price: "+price+"\n";
-        billCreated = true;
-        return this.bill;
+        return bill;
     }
 }
